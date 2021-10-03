@@ -9,7 +9,6 @@
 #define MOSI 7
 #define CS 5
 
-
 void setup() {
     stdio_init_all();
     gpio_init(CS);
@@ -19,7 +18,7 @@ void setup() {
     gpio_set_function(MISO, GPIO_FUNC_SPI);
     gpio_set_function(SCK, GPIO_FUNC_SPI);
     gpio_set_function(MOSI, GPIO_FUNC_SPI);
-    spi_set_format(spi0, 8, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST); // Can it be up to 16 bit bus...?
+    spi_set_format(spi0, 8, SPI_CPOL_1, SPI_CPHA_1, SPI_MSB_FIRST); // Can it be up to 16 bits bus...?
 
     gpio_put(CS, 1);
 }
